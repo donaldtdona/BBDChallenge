@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: "Outfit", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -92,9 +92,9 @@ body {
   }
   
   .slide-text {
-    width: 100%;
+    width: 99%;
     position: absolute;
-    bottom: 8px;
+    bottom: 5px;
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust to center the text */
     color: #fff;
