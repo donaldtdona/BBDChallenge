@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BBD X UMUZI Immersion Day</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {font-family: "Outfit", sans-serif;}
+    .mySlides {display: none;}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">BBD X UMUZI</a>
+      <ul class="navbar-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#band">APPLY</a></li>
+        <li><a href="#tour">GALLERY</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <div class="navbar-toggle" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page content -->
+  <div class="content">
+    <!-- Automatic Slideshow Images -->
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="../media/download.jpg" class="slide-image">
+        <div class="slide-text">
+          <h3>Johannesburg</h3>
+          <p><b>The best time!</b></p>
+        </div>
+      </div>
+      <div class="mySlides">
+        <img src="../media/download.jpg" class="slide-image">
+        <div class="slide-text">
+          <h3>BBD SOFTWARE</h3>
+          <p><b>The atmosphere in New York is lorem ipsum.</b></p>
+        </div>
+      </div>
+      <div class="mySlides">
+        <img src="../media/download.jpg" class="slide-image">
+        <div class="slide-text">
+          <h3>UMUZI</h3>
+          <p><b>It would be awesome to have you there.</b></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Immersion Day info section -->
+    <section id="band" class="info-section">
+      <h2>BBD X UMUZI</h2>
+      <p><i>Immersion Day</i></p>
+      <p>We have created a fictional band website...</p>
+      <div class="info-grid">
+        <div class="info-item">
+          <p>Name</p>
+          <img src="/w3images/bandmember.jpg" class="info-image" alt="Random Name">
+        </div>
+        <div class="info-item">
+          <p>Name</p>
+          <img src="/w3images/bandmember.jpg" class="info-image" alt="Random Name">
+        </div>
+        <div class="info-item">
+          <p>Name</p>
+          <img src="/w3images/bandmember.jpg" class="info-image" alt="Random Name">
+        </div>
+      </div>
+    </section>
+
+    <!-- Apply for Immersion Day section -->
+    <section id="tour" class="apply-section">
+      <h2>Apply to come to Immersion Day here</h2>
+      <p><i>We can't wait to see you there!</i></p>
+      <ul class="apply-list">
+        <li>September <span class="tag">Sold out</span></li>
+        <li>October <span class="tag">Sold out</span></li>
+        <li>November <span class="badge">3</span></li>
+      </ul>
+      <div class="apply-grid">
+        <div class="apply-item">
+          <img src="/w3images/newyork.jpg" class="apply-image" alt="New York">
+          <div class="apply-text">
+            <p><b>New York</b></p>
+            <p class="date">Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="apply-button">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="apply-item">
+          <img src="/w3images/paris.jpg" class="apply-image" alt="Paris">
+          <div class="apply-text">
+            <p><b>Paris</b></p>
+            <p class="date">Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="apply-button">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="apply-item">
+          <img src="/w3images/sanfran.jpg" class="apply-image" alt="San Francisco">
+          <div class="apply-text">
+            <p><b>San Francisco</b></p>
+            <p class="date">Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="apply-button">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticket Modal -->
+    <div id="ticketModal" class="modal">
+      <div class="modal-content">
+        <header class="modal-header">
+          <span onclick="closeModal()" class="close-button">×</span>
+          <h2>Tickets</h2>
+        </header>
+        <div class="modal-body">
+          <p><label>Tickets, $15 per person</label></p>
+          <input class="modal-input" type="text" placeholder="How many?">
+          <p><label>Send To</label></p>
+          <input class="modal-input" type="text" placeholder="Enter email">
+          <button class="modal-button">PAY</button>
+          <button class="modal-button close" onclick="closeModal()">Close</button>
+          <p class="help">Need <a href="#" class="help-link">help?</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>CONTACT</h2>
+      <p><i>Fan? Drop a note!</i></p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <i class="fa fa-map-marker"></i> Chicago, US<br>
+          <i class="fa fa-phone"></i> Phone: +00 151515<br>
+          <i class="fa fa-envelope"></i> Email: mail@mail.com<br>
+        </div>
+        <div class="contact-form">
+          <form action="/action_page.php" target="_blank">
+            <div class="form-group">
+              <input class="form-input" type="text" placeholder="Name" required name="Name">
+              <input class="form-input" type="text" placeholder="Email" required name="Email">
+            </div>
+            <input class="form-input" type="text" placeholder="Message" required name="Message">
+            <button class="form-button" type="submit">SEND</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <i class="fa fa-facebook-official"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-snapchat"></i>
+    <i class="fa fa-pinterest-p"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-linkedin"></i>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 4000);    
+    }
+
+    function toggleMenu() {
+      var menu = document.querySelector('.navbar-menu');
+      menu.classList.toggle('show');
+    }
+
+    function closeModal() {
+      document.getElementById('ticketModal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      if (event.target == document.getElementById('ticketModal')) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
