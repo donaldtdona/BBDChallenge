@@ -1,15 +1,19 @@
 /* General Styles */
 body {
-    font-family: "Outfit", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     margin: 0;
     padding: 0;
   }
   
   /* Navbar Styles */
   .navbar {
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    width: 100%; /* Full width */
     background-color: #000;
     color: #fff;
-    padding: 30px 20px;
+    padding: 20px 20px; /* Adjusted padding for a fixed position */
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
   }
   
   .navbar-container {
@@ -71,8 +75,10 @@ body {
     .navbar-toggle {
       display: block;
     }
+  } 
+  .content {
+    margin-top: 60px; /* Adjust this value based on the height of your navbar */
   }
-  
   /* Slideshow Styles */
   .slideshow-container {
     position: relative;
@@ -86,12 +92,15 @@ body {
   }
   
   .slide-text {
+    width: 99%;
     position: absolute;
-    bottom: 8px;
-    left: 16px;
+    bottom: 5px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to center the text */
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
     padding: 8px;
+    text-align: center; /* Optional: center the text within the text box */
   }
   
   /* Content Section Styles */
