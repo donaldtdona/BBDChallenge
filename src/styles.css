@@ -1,11 +1,11 @@
-
+/* Base Styles */
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Navbar Styles */
+/* Navbar Styles (Original Changes) */
 .navbar {
   position: fixed; /* Fixed position at the top */
   top: 0;
@@ -29,6 +29,13 @@ body {
   text-decoration: none;
   color: #fff;
 }
+.logo-bbd {
+  color: #C80000; /* Red color for BBD */
+}
+
+.logo-umuzi {
+  color: #FF812C; /* Orange color for UMUZI */
+}
 
 .navbar-menu {
   list-style: none;
@@ -43,6 +50,11 @@ body {
   text-decoration: none;
   padding: 8px 16px;
   display: block;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-menu a:hover {
+  color: #C80000; /* Hover color */
 }
 
 .navbar-toggle {
@@ -75,21 +87,15 @@ body {
   background-color: #444;
   border: none;
   position: absolute; /* Position the toggle absolutely */
-  right: 50px; /* Move it 30px from the right edge to give it more space towards the center */
+  right: 50px; /* Move it 50px from the right edge to give it more space towards the center */
   top: 10px; /* Adjust as needed to vertically center or position */
-  transform: translateX(0px); /* Adjust if necessary, but this can be removed if the right property alone is sufficient */
 }
 
-/* Content Section Styles */
-.content {
-  margin-top: 60px; /* Adjust this value based on the height of your navbar */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.navbar-toggle:hover {
+  background-color: #a43d3d; /* Lighter shade for hover effect */
 }
 
-/* Slideshow Styles */
+/* Slideshow Styles (Old Style) */
 .slideshow-container {
   position: relative;
   width: 100vw;
@@ -116,8 +122,136 @@ body {
   width: calc(100% - 20px); /* Ensure text does not overflow the container */
 }
 
-/* Section Styles */
-.info-section,
+/* Gallery Section (New Styles) */
+.gallery-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slideshow-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px; 
+  height: 200px; 
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.slide img, .slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* List Styling (New Styles) */
+ul.requirements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%; 
+  max-width: 900px; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+ul.requirements li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 17px 30px;
+  border-radius: 5px;
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box; 
+  margin: 5px; 
+  max-width: 400px; 
+  text-align: center; 
+}
+
+/* Other Section Styles (Keep from Latest Web Rose) */
+.info-section {
+  padding: 20px;
+  max-width: 1000px; 
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+h1, h3, h4 {
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0 20px;
+  max-width: 100%; 
+  line-height: 1.6; 
+  text-align: center;
+}
+
+/* Additional Section Styles */
 .apply-section,
 .contact-section {
   padding: 20px;
@@ -146,7 +280,8 @@ body {
 }
 
 .apply-button {
-  background-color: #000;
+  background-color: #C80000;
+  border-radius: 5px;
   color: #fff;
   border: none;
   padding: 10px;
@@ -229,7 +364,7 @@ body {
 }
 
 .footer a:hover {
-  color: #007BFF;
+  color:#C80000;
 }
 
 .footer p {
@@ -241,242 +376,3 @@ body {
   text-decoration: underline;
 }
 
-/* Contact Section */
-.contact-section {
-  padding: 40px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.contact-section p {
-  font-style: italic;
-  margin-bottom: 30px;
-}
-
-.contact-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.contact-info {
-  flex: 1;
-  max-width: 45%;
-  text-align: left;
-}
-
-.contact-info i {
-  margin-right: 10px;
-}
-
-.contact-info br {
-  margin-bottom: 10px;
-}
-
-.contact-form {
-  flex: 1;
-  max-width: 45%;
-}
-
-.form-group {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.form-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form-button {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
-
-
-
-/* about */
-.info-section {
-  padding: 20px;
-  max-width: 1000px; 
-  margin: 0 auto; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-
-h1, h3, h4 {
-  margin: 10px 0;
-}
-
-p {
-  margin: 10px 0 20px;
-  max-width: 100%; 
-  line-height: 1.6; 
-  text-align: center;
-}
-
-ul.requirements {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; 
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  width: 100%; 
-  max-width: 900px; 
-  align-items: center; 
-  justify-content: center; 
-}
-
-ul.requirements li {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 17px 30px;
-  border-radius: 5px;
-  flex: 1 1 calc(50% - 20px);
-  box-sizing: border-box; 
-  margin: 5px; 
-  max-width: 400px; 
-  text-align: center; 
-}
-/* about ends */
-
-/* application form */
-input[type=text], select {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=radio], select {
-  width: 50%;
-  padding:0px;
-  margin: 0px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=email], select {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-/* application form ends */
-
-/* gallery */
-.gallery-section {
-padding: 20px;
-background-color: #f4f4f4;
-}
-
-h2 {
-text-align: center;
-margin-bottom: 20px;
-}
-
-.slideshow-container {
-display: flex;
-align-items: center;
-position: relative;
-overflow: hidden;
-width: 100%;
-}
-
-.slides {
-display: flex;
-flex-direction: row;
-overflow-x: auto;
-scroll-behavior: smooth;
-width: 100%;
-scroll-snap-type: x mandatory;
-gap: 10px;
-}
-
-.slide {
-flex: 0 0 auto;
-scroll-snap-align: start;
-width: 300px; 
-height: 200px; 
-background: #fff;
-border: 1px solid #ddd;
-border-radius: 5px;
-overflow: hidden;
-}
-
-.slide img, .slide video {
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-.nav-button {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-background-color: rgba(0, 0, 0, 0.5);
-color: #fff;
-border: none;
-padding: 10px;
-border-radius: 50%;
-cursor: pointer;
-z-index: 1;
-}
-
-.nav-button.prev {
-left: 10px;
-}
-
-.nav-button.next {
-right: 10px;
-}
-
-.nav-button:hover {
-background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-.slides::-webkit-scrollbar {
-display: none;
-}
-/* gallery ends */
-
-
-
-
-  
- 
