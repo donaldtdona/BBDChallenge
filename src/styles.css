@@ -1,6 +1,5 @@
 
 body {
-
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -73,7 +72,7 @@ body {
   cursor: pointer;
   padding: 10px;
   color: white;
-  background-color:#444;
+  background-color: #444;
   border: none;
   position: absolute; /* Position the toggle absolutely */
   right: 50px; /* Move it 30px from the right edge to give it more space towards the center */
@@ -84,6 +83,10 @@ body {
 /* Content Section Styles */
 .content {
   margin-top: 60px; /* Adjust this value based on the height of your navbar */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Slideshow Styles */
@@ -211,210 +214,99 @@ body {
   background-color: #000;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .footer i {
   margin: 0 10px;
 }
-  
-  
 
-
-/* about */
-  .info-section {
-    padding: 20px;
-    max-width: 1000px; 
-    margin: 0 auto; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5em;
 }
 
-.content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+.footer a:hover {
+  color: #007BFF;
 }
 
-h1, h3, h4 {
-    margin: 10px 0;
+.footer p {
+  margin-top: 20px;
+  font-size: 0.9em;
 }
 
-p {
-    margin: 10px 0 20px;
-    max-width: 100%; 
-    line-height: 1.6; 
-    text-align: center;
+.footer a[target="_blank"] {
+  text-decoration: underline;
 }
 
-ul.requirements {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%; 
-    max-width: 900px; 
-    align-items: center; 
-    justify-content: center; 
-}
-
-ul.requirements li {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 17px 30px;
-    border-radius: 5px;
-    flex: 1 1 calc(50% - 20px);
-    box-sizing: border-box; 
-    margin: 5px; 
-    max-width: 400px; 
-    text-align: center; 
-}
-/* about ends */
-
-/* application form */
-.container {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 70px;
-}
-.event-details {
+/* Contact Section */
+.contact-section {
+  padding: 40px;
+  background-color: #f9f9f9;
   text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
-.event-details p {
-  margin: 5px 0;
+
+.contact-section p {
+  font-style: italic;
+  margin-bottom: 30px;
 }
-form {
+
+.contact-grid {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-.form-group {
-  margin-bottom: 15px;
+
+.contact-info {
+  flex: 1;
+  max-width: 45%;
+  text-align: left;
 }
-label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-input[type="text"], .form-group label {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.options {
-  display: flex;
-  flex-direction: column;
-}
-.options label {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-.options input {
+
+.contact-info i {
   margin-right: 10px;
 }
-button {
+
+.contact-info br {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 45%;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-input {
+  width: 100%;
   padding: 10px;
-  background-color: #6200ea;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-button:hover {
-  background-color: #3700b3;
-}
-/* application form ends */
-
-/* gallery */
-.gallery-section {
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.slideshow-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.slides {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  width: 100%;
-  scroll-snap-type: x mandatory;
-  gap: 10px;
-}
-
-.slide {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  width: 300px; 
-  height: 200px; 
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.slide img, .slide video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.nav-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.nav-button.prev {
-  left: 10px;
-}
-
-.nav-button.next {
-  right: 10px;
-}
-
-.nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-.slides::-webkit-scrollbar {
-  display: none;
-}
-/* gallery ends */
-
-
 
 input[type=text], select {
   width: 50%;
@@ -446,4 +338,6 @@ input[type=email], select {
   box-sizing: border-box;
 }
 
-
+.form-button:hover {
+  background-color: #0056b3;
+}
