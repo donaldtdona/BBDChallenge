@@ -69,6 +69,15 @@ body {
 
 .navbar-toggle {
   display: block;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  background-color:#444;
+  border: none;
+  position: absolute; /* Position the toggle absolutely */
+  right: 50px; /* Move it 30px from the right edge to give it more space towards the center */
+  top: 10px; /* Adjust as needed to vertically center or position */
+  transform: translateX(0px); /* Adjust if necessary, but this can be removed if the right property alone is sufficient */
 }
 
 /* Content Section Styles */
