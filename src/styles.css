@@ -29,6 +29,13 @@ body {
   text-decoration: none;
   color: #fff;
 }
+.logo-bbd {
+  color: #C80000; /* Red color for BBD */
+}
+
+.logo-umuzi {
+  color: #FF812C; /* Orange color for UMUZI */
+}
 
 .navbar-menu {
   list-style: none;
@@ -43,6 +50,11 @@ body {
   text-decoration: none;
   padding: 8px 16px;
   display: block;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-menu a:hover {
+  color: #C80000; /* Hover color */
 }
 
 .navbar-toggle {
@@ -75,9 +87,12 @@ body {
   background-color: #444;
   border: none;
   position: absolute; /* Position the toggle absolutely */
-  right: 50px; /* Move it 30px from the right edge to give it more space towards the center */
+  right: 50px; /* Move it 50px from the right edge to give it more space towards the center */
   top: 10px; /* Adjust as needed to vertically center or position */
   transform: translateX(0px); /* Adjust if necessary, but this can be removed if the right property alone is sufficient */
+}
+.navbar-toggle:hover {
+  background-color: #a43d3d; /* Lighter shade for hover effect */
 }
 
 /* Content Section Styles */
@@ -147,6 +162,7 @@ body {
 
 .apply-button {
   background-color: #C80000;
+  border-radius: 5px;
   color: #fff;
   border: none;
   padding: 10px;
@@ -229,7 +245,7 @@ body {
 }
 
 .footer a:hover {
-  color: #007BFF;
+  color:#C80000;
 }
 
 .footer p {
