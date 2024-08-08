@@ -87,7 +87,6 @@ body {
   cursor: pointer;
   padding: 10px;
   color: white;
-  background-color: #444;
   border: none;
   position: absolute; /* Position the toggle absolutely */
   right: 90px; /* Move it 50px from the right edge to give it more space towards the center */
