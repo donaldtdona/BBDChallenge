@@ -83,54 +83,7 @@
     <br><br><br><br><br><br>
     <br><br>
 
-    <!-- application form -->
-
-    <div class="container">
-      <div class="event-details">
-        <p><strong>Event Address:</strong> BBD - Johannesburg, The Zone Boulevard, Cnr Cradock &, Tyrwhitt Ave,
-          Rosebank, Johannesburg, 2196, South Africa</p>
-        <p><strong>Date:</strong> 12th August 2024</p>
-        <p><strong>Time:</strong> 10:00 AM - 4:00 PM</p>
-      </div>
-      <form id="apply-event" method="POST"
-        action="https://script.google.com/macros/s/AKfycbxE8iPSwxsXkYYWjChHWuXp-ygjohyqgO8-i-sNlIBryVjoGLTeiEZoo2imEcENK53g/exec">
-      </form>
-      <div class=" form-group">
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="first-name" placeholder="First Name">
-      </div>
-      <div class="form-group">
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="last-name" placeholder="Last Name">
-      </div>
-      <div class="form-group">
-        <label>Are studying Web development at Umuzi?.</label>
-        <div class="options">
-          <label><input type="radio" name="html-symbols" value="option1"> Yes</label>
-          <label><input type="radio" name="html-symbols" value="option2"> No</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Will you be joining the event physically or remotely?</label>
-        <div class="options">
-          <label><input type="radio" name="image-tag" value="option1"> Physically</label>
-          <label><input type="radio" name="image-tag" value="option2"> Remotely</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Are you sponsored by BBD Software?</label>
-        <div class="options">
-          <label><input type="radio" name="html-definition" value="option1"> Yes</label>
-          <label><input type="radio" name="html-definition" value="option2"> No</label>
-
-        </div>
-      </div>
-      <button type="submit">Submit</button>
-      </form>
-    </div>
-    <!-- application form ends -->
-    <br><br><br><br><br><br>
-    <br><br>
+ 
     <!-- gallery section -->
     <section id="gallery" class="gallery-section">
       <h2>Gallery</h2>
@@ -159,23 +112,35 @@
             <img src="./media/images/pic6.jpg" alt="Picture 6">
           </div>
           <div class="slide">
-            <video controls>
-              <source src="https://path_to_video1.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="slide">
-            <video controls>
-              <source src="https://path_to_video2.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="slide">
-            <video controls>
-              <source src="https://path_to_video3.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
+            <!-- Instagram video embed -->
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C-TAp3PNmq_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14" style="background:#FFF; border:0; margin:1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px); width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                <div style="padding:16px;">
+                    <a href="https://www.instagram.com/reel/C-TAp3PNmq_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" style="color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Watch this video on Instagram</a>
+                </div>
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+    
+        <div class="slide">
+            <!-- Instagram video embed -->
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C-X3LUrtvvM/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" data-instgrm-version="14" style="background:#FFF; border:0; margin:1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px); width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                <div style="padding:16px;">
+                    <a href="https://www.instagram.com/reel/C-X3LUrtvvM/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" style="color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Watch this video on Instagram</a>
+                </div>
+            </blockquote>
+            <script async src="//www.instagram.com/embed.js"></script>
+        </div>
+    
+        <div class="slide">
+            <!-- TikTok video embed -->
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@just_rose01/video/7400344576667503878?is_from_webapp=1&sender_device=pc&web_id=7400534601649063429" data-video-id="7400344576667503878" style="max-width: 605px;min-width: 325px;">
+                <section>
+                    <a target="_blank" title="@just_rose01" href="https://www.tiktok.com/@just_rose01">just_rose01</a>
+                    Watch the full video on TikTok.
+                </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
           <!-- Add more slides as needed -->
         </div>
         <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
@@ -280,22 +245,7 @@
     // Initialize the first slide
     showSlide(slideIndex);
 
-    window.addEventListener("DOMContentLoaded", function () {
-      const yourForm = document.getElementById('apply-event');
-      yourForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const data = new FormData(yourForm);
-        const action = e.target.action;
-        fetch(action, {
-          method: 'POST',
-          body: data,
-        }).then(() => {
-          window.location.replace(href = "#Apply")
-          document.getElementById("apply-event").reset();
-          alert("response submitted successfully !");
-        })
-      })
-    });
+
 
   </script>
 </body>
