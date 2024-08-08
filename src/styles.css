@@ -120,7 +120,7 @@ body {
 
 .slide-text {
   position: absolute;
-  bottom: 5px;
+  bottom: 1px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
@@ -133,7 +133,7 @@ body {
 /* Gallery Section (New Styles) */
 .gallery-section {
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #090E3B;
 }
 
 h2 {
@@ -141,6 +141,9 @@ h2 {
   margin-bottom: 20px;
 }
 
+.gallery-text {
+  color: #fff;
+}
 .slideshow-container {
   display: flex;
   align-items: center;
