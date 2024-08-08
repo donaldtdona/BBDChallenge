@@ -22,7 +22,7 @@
         <li><a href="#">HOME</a></li>
         <li><a href="#About">ABOUT</a></li>
         <li><a href="#Apply">APPLY</a></li>
-        <li><a href="#Gallery">GALLERY</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
       <div class="navbar-toggle" onclick="toggleMenu()">
@@ -63,7 +63,7 @@
           inspiration, and the start of your tech career journey with BBD and Umuzi.</p>
         <h3>Requirements for the Event</h3>
         <p>To participate in the BBD Software x Umuzi.org Immersion Day, students must meet the following requirements:</p>
-        <ul class="requirements">
+        <ul id="Apply" class="requirements">
           <li>You must be a current student at Umuzi studying web development.</li>
           <li>You must be sponsored by BBD Software.</li>
           <li>For students within Johannesburg, physical attendance is compulsory.</li>
@@ -210,9 +210,19 @@
     }
 
     function toggleMenu() {
-      var menu = document.querySelector('.navbar-menu');
-      menu.classList.toggle('show');
-    }
+  var menu = document.querySelector('.navbar-menu');
+  menu.classList.toggle('show');
+}
+
+function closeMenu() {
+  var menu = document.querySelector('.navbar-menu');
+  menu.classList.remove('show');
+}
+
+// Attach event listeners to each menu item
+document.querySelectorAll('.navbar-menu a').forEach(item => {
+  item.addEventListener('click', closeMenu);
+});
 
     function closeModal() {
       document.getElementById('ticketModal').style.display = 'none';
