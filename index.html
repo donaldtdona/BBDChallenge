@@ -85,67 +85,56 @@
 
  
     <!-- gallery section -->
-    <section id="gallery" class="gallery-section">
-      <h2>Gallery</h2>
-      <div class="slideshow-container">
-        <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
-        <div class="slides">
+<!-- gallery section -->
+<section id="gallery" class="gallery-section">
+  <h2>Gallery</h2>
+  <div class="slideshow-container">
+      <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+      <div class="slides">
           <div class="slide">
-            <img src="./media/images/pic0.jpg" alt="Picture 0">
+              <img src="./media/images/pic0.jpg" alt="Picture 0">
           </div>
           <div class="slide">
-            <img src="./media/images/pic1.jpg" alt="Picture 1">
+              <img src="./media/images/pic1.jpg" alt="Picture 1">
           </div>
           <div class="slide">
-            <img src="./media/images/pic2.jpg" alt="Picture 2">
+              <img src="./media/images/pic2.jpg" alt="Picture 2">
           </div>
           <div class="slide">
-            <img src="./media/images/pic3.jpg" alt="Picture 3">
+              <img src="./media/images/pic3.jpg" alt="Picture 3">
           </div>
           <div class="slide">
-            <img src="./media/images/pic4.jpg" alt="Picture 4">
+              <img src="./media/images/pic4.jpg" alt="Picture 4">
           </div>
           <div class="slide">
-            <img src="./media/images/pic5.jpg" alt="Picture 5">
+              <img src="./media/images/pic5.jpg" alt="Picture 5">
           </div>
           <div class="slide">
-            <img src="./media/images/pic6.jpg" alt="Picture 6">
+              <img src="./media/images/pic6.jpg" alt="Picture 6">
           </div>
           <div class="slide">
-            <!-- Instagram video embed -->
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C-TAp3PNmq_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14" style="background:#FFF; border:0; margin:1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px); width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                <div style="padding:16px;">
-                    <a href="https://www.instagram.com/reel/C-TAp3PNmq_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" style="color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Watch this video on Instagram</a>
-                </div>
-            </blockquote>
-            <script async src="//www.instagram.com/embed.js"></script>
-        </div>
-    
-        <div class="slide">
-            <!-- Instagram video embed -->
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C-X3LUrtvvM/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" data-instgrm-version="14" style="background:#FFF; border:0; margin:1px; max-width:540px; min-width:326px; padding:0; width:calc(100% - 2px); width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                <div style="padding:16px;">
-                    <a href="https://www.instagram.com/reel/C-X3LUrtvvM/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" style="color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Watch this video on Instagram</a>
-                </div>
-            </blockquote>
-            <script async src="//www.instagram.com/embed.js"></script>
-        </div>
-    
-        <div class="slide">
-            <!-- TikTok video embed -->
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@just_rose01/video/7400344576667503878?is_from_webapp=1&sender_device=pc&web_id=7400534601649063429" data-video-id="7400344576667503878" style="max-width: 605px;min-width: 325px;">
-                <section>
-                    <a target="_blank" title="@just_rose01" href="https://www.tiktok.com/@just_rose01">just_rose01</a>
-                    Watch the full video on TikTok.
-                </section>
-            </blockquote>
-            <script async src="https://www.tiktok.com/embed.js"></script>
-        </div>
-          <!-- Add more slides as needed -->
-        </div>
-        <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+              <!-- Instagram Thumbnail -->
+              <a href="https://www.instagram.com/reel/C-TAp3PNmq_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="video-thumbnail">
+                  <img src="./media/images/thumb3.jpg" alt="Instagram Video 1">
+              </a>
+          </div>
+          <div class="slide">
+              <!-- Instagram Thumbnail -->
+              <a href="https://www.instagram.com/reel/C-X3LUrtvvM/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank" class="video-thumbnail">
+                  <img src="./media/images/pic3.jpg" alt="Instagram Video 2">
+              </a>
+          </div>
+          <div class="slide">
+              <!-- TikTok Thumbnail -->
+              <a href="https://www.tiktok.com/@just_rose01/video/7400344576667503878?is_from_webapp=1&sender_device=pc&web_id=7400534601649063429" target="_blank" class="video-thumbnail">
+                  <img src="./media/images/thumb2.jpg" alt="TikTok Video">
+              </a>
+          </div>
       </div>
-    </section>
+      <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+  </div>
+</section>
+
 
 
 
@@ -218,33 +207,32 @@
     // scripts.js
     let slideIndex = 0;
 
-    function showSlide(index) {
-      const slides = document.querySelector('.slides');
-      const totalSlides = document.querySelectorAll('.slide').length;
+function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
 
-      if (index >= totalSlides) {
+    if (index >= totalSlides) {
         slideIndex = 0;
-      } else if (index < 0) {
+    } else if (index < 0) {
         slideIndex = totalSlides - 1;
-      } else {
+    } else {
         slideIndex = index;
-      }
-
-      const offset = -slideIndex * 100; // Move by the full width of one slide
-      slides.style.transform = `translateX(${offset}%)`;
     }
 
-    function nextSlide() {
-      showSlide(slideIndex + 1);
-    }
+    const offset = -slideIndex * 100; // Move by the full width of one slide
+    slides.style.transform = `translateX(${offset}%)`;
+}
 
-    function prevSlide() {
-      showSlide(slideIndex - 1);
-    }
+function nextSlide() {
+    showSlide(slideIndex + 1);
+}
 
-    // Initialize the first slide
-    showSlide(slideIndex);
+function prevSlide() {
+    showSlide(slideIndex - 1);
+}
 
+// Initialize the first slide
+showSlide(slideIndex);
 
 
   </script>
