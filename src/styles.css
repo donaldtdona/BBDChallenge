@@ -270,6 +270,9 @@ body {
   flex: 1;
   max-width: 45%;
   text-align: left;
+  padding: 20px; /* Add padding for consistent spacing */
+  margin: 0; /* Ensure no extra margin is applied */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .contact-info i {
@@ -283,6 +286,9 @@ body {
 .contact-form {
   flex: 1;
   max-width: 45%;
+  padding: 20px; /* Add padding for consistent spacing */
+  margin: 0; /* Ensure no extra margin is applied */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .form-group {
@@ -294,7 +300,7 @@ body {
 .form-input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Spacing between input fields */
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -306,6 +312,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%; /* Ensure the button spans the full width */
 }
 
 .form-button:hover {
