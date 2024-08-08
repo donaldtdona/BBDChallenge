@@ -341,3 +341,72 @@ input[type=email], select {
 .form-button:hover {
   background-color: #0056b3;
 }
+
+
+ /* form styles */
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=radio], select {
+  width: 50%;
+  padding:0px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  background-color: #000;
+  width: 50%;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type=email], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.event-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-center{
+  display: block;
+  text-align: center;
+}
+
+.apply-event{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.radio{
+  width: 50%;
+  padding: 2%;
+  position: relative;
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+/* form styles end */
