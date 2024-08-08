@@ -193,8 +193,86 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+
+    function toggleMenu() {
+      var menu = document.querySelector('.navbar-menu');
+      menu.classList.toggle('show');
+    }
+
+    function closeModal() {
+      document.getElementById('ticketModal').style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+      if (event.target == document.getElementById('ticketModal')) {
+        closeModal();
+      }
+    }
+
+    // gallery
+    // scripts.js
+    let slideIndex = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelector('.slides');
+      const totalSlides = document.querySelectorAll('.slide').length;
+
+      if (index >= totalSlides) {
+        slideIndex = 0;
+      } else if (index < 0) {
+        slideIndex = totalSlides - 1;
+      } else {
+        slideIndex = index;
+      }
+
+      const offset = -slideIndex * 100; // Move by the full width of one slide
+      slides.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(slideIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(slideIndex - 1);
+    }
+
+    // Initialize the first slide
+    showSlide(slideIndex);
+
+    window.addEventListener("DOMContentLoaded", function () {
+      const yourForm = document.getElementById('apply-event');
+      yourForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(yourForm);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        }).then(() => {
+          window.location.replace(href = "#Apply")
+          document.getElementById("apply-event").reset();
+          alert("response submitted successfully !");
+        })
+      })
+    });
+
+  </script>
 </body>
 
 </html>
