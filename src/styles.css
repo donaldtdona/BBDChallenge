@@ -1,10 +1,14 @@
+
+/* Base Styles */
+
+
 body {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Navbar Styles */
+/* Navbar Styles (Original Changes) */
 .navbar {
   position: fixed; /* Fixed position at the top */
   top: 0;
@@ -88,24 +92,18 @@ body {
   position: absolute; /* Position the toggle absolutely */
   right: 50px; /* Move it 50px from the right edge to give it more space towards the center */
   top: 10px; /* Adjust as needed to vertically center or position */
+
   transform: translateX(
     0px
   ); /* Adjust if necessary, but this can be removed if the right property alone is sufficient */
+
 }
+
 .navbar-toggle:hover {
   background-color: #a43d3d; /* Lighter shade for hover effect */
 }
 
-/* Content Section Styles */
-.content {
-  margin-top: 60px; /* Adjust this value based on the height of your navbar */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Slideshow Styles */
+/* Slideshow Styles (Old Style) */
 .slideshow-container {
   position: relative;
   width: 100vw;
@@ -132,8 +130,136 @@ body {
   width: calc(100% - 20px); /* Ensure text does not overflow the container */
 }
 
-/* Section Styles */
-.info-section,
+/* Gallery Section (New Styles) */
+.gallery-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slideshow-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px; 
+  height: 200px; 
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.slide img, .slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* List Styling (New Styles) */
+ul.requirements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%; 
+  max-width: 900px; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+ul.requirements li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 17px 30px;
+  border-radius: 5px;
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box; 
+  margin: 5px; 
+  max-width: 400px; 
+  text-align: center; 
+}
+
+/* Other Section Styles (Keep from Latest Web Rose) */
+.info-section {
+  padding: 20px;
+  max-width: 1000px; 
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+h1, h3, h4 {
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0 20px;
+  max-width: 100%; 
+  line-height: 1.6; 
+  text-align: center;
+}
+
+/* Additional Section Styles */
 .apply-section,
 .contact-section {
   padding: 20px;
