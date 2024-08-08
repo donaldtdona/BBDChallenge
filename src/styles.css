@@ -104,7 +104,7 @@ body {
 }
 
 /* Slideshow Styles (Old Style) */
-.slideshow-container {
+.slideshow-containerr {
   position: relative;
   width: 100vw;
   height: 600px;
@@ -175,6 +175,14 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
+
+.slideshow-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  }
 
 .nav-button {
   position: absolute;
