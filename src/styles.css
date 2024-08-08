@@ -367,6 +367,7 @@ p {
   background-color: #333;
   color: white;
   text-align: center;
+  width: 100%;
 }
 
 .footer a {
@@ -387,6 +388,18 @@ p {
 
 .footer a[target="_blank"] {
   text-decoration: underline;
+  text-decoration-color: #ddd;
+}
+
+.recruit {
+  color: inherit; /* Inherit color from parent element */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Define the hover effect for the .recruit class */
+a:hover .recruit {
+  color: red;
+  /* Change text color to red on hover */
 }
 
 /* Contact Section */
