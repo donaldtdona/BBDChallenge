@@ -273,7 +273,7 @@ h2 {
     }
   } 
   .content {
-    margin-top: 60px; /* Adjust this value based on the height of your navbar */
+    margin-top: 60px; 
   }
   /* Slideshow Styles */
   .slideshow-container {
